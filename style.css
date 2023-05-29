@@ -1,0 +1,409 @@
+@font-face {
+    font-family: 'daciaSpirit';
+    src: url(assets/fonts/DaciaSpirit-Regular.woff2) format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'daciaSpirit';
+    src: url(assets/fonts/DaciaSpirit-Bold.woff2) format('woff2');
+    font-weight: bold;
+}
+
+:root {
+    --primary-color: #0D5FFF;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --dark-color: #040404;
+    --dark-color-2: #242424;
+    --darker-grey-color: #3A3A3A;
+    --darker-grey-color-2: #535353;
+
+    --font-sm: 1rem;
+    --font-sm-2: 1.0625rem;
+    --font-md: 1.3125rem;
+    --font-lg: 1.5625rem;
+    --font-lg-2: 1.625rem;
+
+    --primary-font: "daciaSpirit", sans-serif;
+}
+
+/*-------------------
+CSS Reset
+--------------------*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--primary-font);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    font-weight: normal;
+}
+
+/*-------------------
+General styling
+--------------------*/
+h1 {
+    font-size: var(--font-lg-2);
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: var(--font-lg);
+    line-height: 1.2;
+}
+
+h3, p {
+    font-size: var(--font-sm-2);
+    line-height: 1.2;
+}
+
+sub {
+    font-size: 60%;
+}
+
+.btn {
+    width: 352px;
+    max-width: 100%;
+    border-radius: 45px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 1rem 0;
+    font-size: var(--font-sm);
+    line-height: 1.2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1081px;
+    margin: 0 auto;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.white-color {
+    color: var(--white-color)
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*-------------------
+Main menu
+--------------------*/
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu > * {
+    flex: 1;
+}
+
+.logo-wrap {
+    padding: 1.5625rem 0;
+}
+
+.logo-wrap img {
+    height: 28px;
+}
+
+.burger-menu-wrapper {
+    display: none;
+}
+
+.burger-menu {
+    cursor: pointer;
+}
+
+.burger-menu span {
+    display: block;
+    width: 24px;
+    height: 0;
+    border-top: 2px solid var(--black-color);
+    border-radius: 3px;
+    position: relative;
+}
+
+.burger-menu span:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.main-menu nav {
+    display: block;
+}
+
+.main-menu nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0 8%;
+    justify-content: flex-end;
+    margin-right: 8%;
+}
+
+.main-menu nav ul li a {
+    text-decoration: none;
+    font-size: var(--font-sm-2);
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/*-------------------
+Banner
+--------------------*/
+.banner-section img {
+    width: 100%;
+    max-width: 572px;
+}
+
+.banner-wrap {
+    display: flex;
+    align-items: center;
+    padding: 1.875rem 0;
+}
+
+.banner-wrap h1 {
+    margin-right: 2rem;
+}
+
+.banner-wrap h1,
+.banner-wrap img {
+    flex: 1;
+}
+
+/*-------------------
+3 step
+--------------------*/
+.three-step-presentation-section {
+    margin: 3.125rem 0;
+}
+
+.three-step-presentation-section h3 {
+    font-size: var(--font-sm-2);
+    line-height: 1.2;
+    max-width: 70%;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.three-step {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+}
+
+.step {
+    flex: 1;
+}
+
+.step p {
+    font-size: var(--font-md);
+    line-height: 1.6;
+    color: var(--darker-grey-color);
+    margin-top: .8rem;
+}
+
+
+.comparaison-section {
+    margin: 1rem 0 5.6875rem 0;
+}
+.comparaison-section h2 {
+    text-align: center;
+    font-size: var(--font-lg);
+    line-height: 1.2;
+    font-weight: bold;
+    color: var(--darker-grey-color-2);
+    margin-bottom: 2.75rem;
+}
+
+.comparaison-section table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.comparaison-section th,
+.comparaison-section td {
+    font-size: var(--font-sm);
+    padding: .3rem 1rem;
+    color: var(--darker-grey-color-2);
+}
+
+.comparaison-section thead th:first-child {
+    width: 384px;
+}
+
+.comparaison-section thead th:nth-child(2),
+.comparaison-section thead th:last-child {
+    width: 168px;
+}
+
+.comparaison-section tbody td {
+    border-left: 1px solid #C7C7C7;
+}
+
+.comparaison-section tbody td {
+    border-bottom: 1px solid #C7C7C7;
+}
+
+.comparaison-section thead th:nth-child(2),
+.comparaison-section tbody td:nth-child(2),
+.comparaison-section thead th:last-child,
+.comparaison-section tbody td:last-child {
+    text-align: center;
+}
+
+.comparaison-section thead th:nth-child(2),
+.comparaison-section tbody td:nth-child(2) {
+    background-color: #E6E6E6;
+}
+
+.comparaison-section thead th:last-child,
+.comparaison-section tbody td:last-child {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.comparaison-section thead tr:nth-child(2) th {
+    background-color: var(--dark-color-2);
+    text-align: left;
+    color: var(--white-color);
+    font-weight: normal;
+}
+
+.contact-us-section {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+/*-------------------
+Modal
+--------------------*/
+.modal-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-wrapper .modal {
+    width: 720px;
+    height: 562px;
+    background-color: var(--white-color);
+    border: 1px solid #707070;
+    padding: 1.875rem;
+}
+
+.modal-wrapper .modal .modal-close {
+    border: none;
+    font-size: 2.25rem;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    font-weight: bold;
+    line-height: 1;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 1.625rem;
+    cursor: pointer;
+}
+
+.modal-wrapper .modal h2 {
+    font-size: var(--font-sm);
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.modal-wrapper .modal p {
+    font-size: var(--font-sm-2);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+}
+
+
+@media screen and (max-width: 1081px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    h1 {
+        line-height: 1.4;
+    }
+
+    .burger-menu-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .main-menu nav {
+        display: none;
+    }
+
+    .banner-wrap {
+        flex-wrap: wrap;
+    }
+
+    .banner-wrap h1 {
+        order: 1;
+        margin-top: 2rem;
+    }
+
+    .three-step-presentation-section h3 {
+        text-align: left;
+        max-width: 100%;
+        line-height: 1.6;
+    }
+
+    .three-step {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem 0;
+    }
+}
